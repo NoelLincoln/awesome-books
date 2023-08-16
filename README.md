@@ -2,7 +2,6 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="assets/images/amannatrustlogo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>AWESOME BOOKS</b></h3>
@@ -31,7 +30,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -135,6 +133,20 @@ You can deploy this project using [GitHub Pages](https://pages.github.com/)
 
 <!-- AUTHORS -->
 
+## 👥 Authors <a name="authors"></a>
+
+👤 **Noel Bryant**
+
+- GitHub: [@githubhandle](https://github.com/NoelLincoln)
+- Twitter: [@twitterhandle](https://twitter.com/NoelLincoln)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/noel-bryant/)
+
+👤 **Anold Mwawasi**
+
+- GitHub: [@MPDADDY](https://github.com/MPDADDY)
+- Twitter: [@anoldmwawasi](https://twitter.com/anold_mwawasi)
+- LinkedIn: [anoldmwawasi](https://www.linkedin.com/in/anold-mwawasi/)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -169,8 +181,6 @@ If you like this project feel free to contact me.
 I would like to thank the entire Microverse community and family for the support and motivation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## License
 
 <!-- LICENSE -->
 
