@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const bookTitle = document.getElementById("title");
   const bookAuthor = document.getElementById('author');
   const article = document.getElementById('bookList');
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const Title = document.createElement('p');
       const Author = document.createElement('p');
+      const hr = document.createElement('hr')
 
       Title.innerHTML = bookTitle.value;
       Author.innerHTML = bookAuthor.value;
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       div.appendChild(Title);
       div.appendChild(Author);
       div.appendChild(btn); // Append the remove button
+      div.appendChild(hr)
 
       article.appendChild(div);
       bookTitle.value = "";
@@ -38,4 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
       saveItemToLocalStorage(Title.innerHTML, Author.innerHTML);
     }
   }
-})
+
+
+});
+
+
