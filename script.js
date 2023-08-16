@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = div.querySelector('p:first-child').innerHTML;
     const author = div.querySelector('p:nth-child(2)').innerHTML;
     const index = savedBooks.findIndex(
-      (item) => item.title === title && item.author === author
+      (item) => item.title === title && item.author === author,
     );
     if (index !== -1) {
       savedBooks.splice(index, 1);
