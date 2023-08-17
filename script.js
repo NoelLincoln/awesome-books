@@ -29,6 +29,23 @@ class BookManager {
       this.updateLocalStorage();
     }
   }
+
+  renderBooks() {
+    this.article.innerHTML = '';
+    this.savedBooks.forEach((book, index) => {
+      const bookDiv = document.createElement('div');
+      bookDiv.className = 'book';
+      bookDiv.innerHTML = `${book.title} written by ${book.author}`;
+      const removeBtn = document.createElement('button');
+      removeBtn.innerHTML = 'Remove';
+      removeBtn.addEventListener('click', () => {
+        this.removeBook(index);
+        this.renderBooks();
+      });
+      bookDiv.appendChild(removeBtn);
+      this.article.appendChild(bookDiv);
+    });
+  }
 }
 
 function initializeApp() {
