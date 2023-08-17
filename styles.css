@@ -30,7 +30,8 @@ article.booklist {
 }
 
 button {
-  margin-top: 5px;
+  margin-top: 2px;
+  margin-bottom: 5px;
   height: 28px;
   width: auto;
   border: 3px solid rgb(12, 11, 11);
@@ -64,8 +65,12 @@ form > button {
   margin-right: -14px;
 }
 
-input[type=text] {
+input[type='text'] {
   width: 100%;
   border: 3px solid black;
   padding: 5px;
+}
+
+.grey {
+  background-color: #f5f5f5;
 }

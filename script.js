@@ -8,7 +8,7 @@ class BookManager {
 
     this.addButton.addEventListener(
       'click',
-      this.handleOnClickAddBook.bind(this)
+      this.handleOnClickAddBook.bind(this),
     );
     this.renderBooks();
   }
@@ -44,7 +44,13 @@ class BookManager {
       });
       bookDiv.appendChild(removeBtn);
       this.article.appendChild(bookDiv);
-      console.log(this.article);
+
+      const booksdiv = document.querySelectorAll('.book');
+      for (let i = 0; i < booksdiv.length; i += 1) {
+        if (i % 2 !== 0) {
+          booksdiv[i].classList.add('grey');
+        }
+      }
     });
   }
 
