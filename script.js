@@ -1,19 +1,16 @@
 class BookManager {
-  constructor() {
+  constructor () {
     this.savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
     this.bookTitle = document.getElementById('title');
     this.bookAuthor = document.getElementById('author');
     this.article = document.getElementById('bookList');
     this.addButton = document.getElementById('add');
 
-    this.addButton.addEventListener(
-      'click',
-      this.handleOnClickAddBook.bind(this)
-    );
+    this.addButton.addEventListener('click', this.handleOnClickAddBook.bind(this));
     this.renderBooks();
   }
 
-  handleOnClickAddBook(event) {
+  handleOnClickAddBook (event) {
     event.preventDefault();
     this.addBook();
     this.renderBooks();
@@ -21,21 +18,21 @@ class BookManager {
     this.bookAuthor.value = '';
   }
 
-  addBook() {
+  addBook () {
     const title = this.bookTitle.value.trim();
     const author = this.bookAuthor.value.trim();
     if (title && author) {
-      this.savedBooks.push({ title, author });
+      this.savedBooks.push({title, author});
       this.updateLocalStorage();
     }
   }
 
-  renderBooks() {
+  renderBooks () {
     this.article.innerHTML = '';
     this.savedBooks.forEach((book, index) => {
       const bookDiv = document.createElement('div');
       bookDiv.className = 'book';
-      bookDiv.innerHTML = `${book.title} written by ${book.author}`;
+      bookDiv.innerHTML = `${ book.title } written by ${ book.author }`;
       const removeBtn = document.createElement('button');
       removeBtn.innerHTML = 'Remove';
       removeBtn.addEventListener('click', () => {
@@ -46,6 +43,7 @@ class BookManager {
       this.article.appendChild(bookDiv);
     });
   }
+
   removeBook (index) {
     this.savedBooks.splice(index, 1);
     this.updateLocalStorage();
@@ -56,9 +54,8 @@ class BookManager {
   }
 }
 
-function initializeApp() {
+function initializeApp () {
   const app = new BookManager();
-  return app;
 }
 
 document.addEventListener('DOMContentLoaded', initializeApp);
