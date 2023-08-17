@@ -46,6 +46,10 @@ class BookManager {
       this.article.appendChild(bookDiv);
     });
   }
+  removeBook (index) {
+    this.savedBooks.splice(index, 1);
+    this.updateLocalStorage();
+  }
 }
 
 function initializeApp() {
