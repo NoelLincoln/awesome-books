@@ -50,6 +50,10 @@ class BookManager {
     this.savedBooks.splice(index, 1);
     this.updateLocalStorage();
   }
+
+  updateLocalStorage () {
+    localStorage.setItem('savedBooks', JSON.stringify(this.savedBooks));
+  }
 }
 
 function initializeApp() {
