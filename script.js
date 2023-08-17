@@ -20,6 +20,15 @@ class BookManager {
     this.bookTitle.value = '';
     this.bookAuthor.value = '';
   }
+
+  addBook() {
+    const title = this.bookTitle.value.trim();
+    const author = this.bookAuthor.value.trim();
+    if (title && author) {
+      this.savedBooks.push({ title, author });
+      this.updateLocalStorage();
+    }
+  }
 }
 
 function initializeApp() {
