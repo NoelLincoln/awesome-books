@@ -9,7 +9,7 @@ class BookManager {
 
     this.addButton.addEventListener(
       'click',
-      this.handleOnClickAddBook.bind(this)
+      this.handleOnClickAddBook.bind(this),
     );
     this.renderBooks();
   }
@@ -21,7 +21,7 @@ class BookManager {
     const navUl = document.getElementById('nav_links');
     const navLinks = navUl.getElementsByClassName('link');
     for (let i = 0; i < navLinks.length; i += 1) {
-      navLinks[i].addEventListener('click', function () {
+      navLinks[i].addEventListener('click', () => {
         const current = document.getElementsByClassName('active');
         if (current.length > 0) {
           current[0].className = current[0].className.replace(' active', '');
@@ -30,7 +30,8 @@ class BookManager {
         if (navLinks[i].innerHTML === 'List') {
           formSection.style.display = 'none';
           contactSection.style.display = 'none';
-        } else if (navLinks[i].innerHTML == 'Add New') {
+          bookContainer.style.display = 'block';
+        } else if (navLinks[i].innerHTML === 'Add New') {
           formSection.style.display = 'block';
           contactSection.style.display = 'none';
           bookContainer.style.display = 'none';
@@ -38,10 +39,6 @@ class BookManager {
           contactSection.style.display = 'block';
           formSection.style.display = 'none';
           bookContainer.style.display = 'none';
-        } else {
-          bookContainer.style.display = 'block';
-          contactSection.style.display = 'none';
-          formSection.style.display = 'none';
         }
       });
     }

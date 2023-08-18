@@ -23,8 +23,13 @@
 
 h1,
 h2 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family:
+    'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
 }
 
 h1 {
@@ -43,10 +48,14 @@ div.time,
 }
 
 .contact {
-  margin-top: 3rem;
+  margin: 3rem auto auto auto;
   width: 80%;
   max-width: 450px;
-  margin: auto;
+}
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
 }
 
 .contact > ul {
@@ -58,6 +67,14 @@ div.time,
   /* font-weight: 600; */
   color: black;
   padding: 3px auto;
+}
+
+nav > a {
+  text-decoration: none !important;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding: 5px 10px 5px 10px;
 }
 
 .contact a {
@@ -153,19 +170,6 @@ nav {
   margin: 3rem auto auto auto;
 }
 
-nav > a {
-  text-decoration: none !important;
-  font-size: 20px;
-  font-weight: 600;
-  color: black;
-  padding: 5px 10px 5px 10px;
-}
-
-nav > ul {
-  display: flex;
-  list-style-type: none;
-}
-
 .link {
   text-decoration: none;
   color: black;
@@ -184,8 +188,7 @@ nav > ul {
 .nav-links li:last-child {
   border-right: none;
 }
-/* .nav-links {
-} */
+
 main {
   height: auto;
 }
