@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 h1 {
@@ -12,10 +19,34 @@ h1 {
 .books_Container,
 footer,
 nav,
-div.time {
+div.time,
+.contact {
   width: 98%;
   max-width: 500px;
   margin: auto;
+}
+
+.contact {
+  margin-top: 3rem;
+}
+
+.contact > ul {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.contact li,
+.contact p {
+  /* font-weight: 600; */
+  color: black;
+  padding: 3px auto;
+}
+
+.contact a {
+  color: black;
+}
+
+.contact a:hover {
+  color: rgb(18, 18, 73);
 }
 
 .time {
@@ -79,7 +110,6 @@ form {
 
 form > button {
   float: right;
-  margin-right: -14px;
 }
 
 input[type='text'] {
@@ -96,14 +126,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 10px 5px 10px;
   border: 3px solid black;
 }
 
 nav > a {
   text-decoration: none;
   font-size: 20px;
+  font-weight: 600;
   color: black;
+  padding: 5px 10px 5px 10px;
 }
 
 nav > ul {
@@ -111,5 +142,14 @@ nav > ul {
   list-style-type: none;
 }
 
+.nav-links li {
+  font-weight: 600;
+  padding: 2px 10px;
+  border-right: 2px solid black;
+}
+
+.nav-links li:last-child {
+  border-right: none;
+}
 /* .nav-links {
 } */
