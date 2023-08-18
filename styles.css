@@ -5,6 +5,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 475px;
+  width: 98%;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 h1,
 h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
@@ -28,6 +44,9 @@ div.time,
 
 .contact {
   margin-top: 3rem;
+  width: 80%;
+  max-width: 450px;
+  margin: auto;
 }
 
 .contact > ul {
@@ -59,7 +78,7 @@ div.time,
 }
 
 .footer {
-  margin: 3rem auto 3rem auto;
+  margin: 3rem auto 2px auto;
   border: 3px solid black;
   padding: 5px 10px 5px 10px;
 }
@@ -69,6 +88,8 @@ article.booklist {
   flex-direction: column;
   border: 2px solid black;
   border-radius: 4px;
+  overflow-y: auto;
+  height: 178px;
 }
 
 .book {
@@ -133,7 +154,7 @@ nav {
 }
 
 nav > a {
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 20px;
   font-weight: 600;
   color: black;
@@ -145,8 +166,13 @@ nav > ul {
   list-style-type: none;
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
 .active {
-  color: red;
+  color: rgb(30, 92, 200);
 }
 
 .nav-links li {
@@ -160,3 +186,6 @@ nav > ul {
 }
 /* .nav-links {
 } */
+main {
+  height: auto;
+}
