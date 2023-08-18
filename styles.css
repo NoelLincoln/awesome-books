@@ -145,6 +145,10 @@ nav > ul {
   list-style-type: none;
 }
 
+.active {
+  color: red;
+}
+
 .nav-links li {
   font-weight: 600;
   padding: 2px 10px;
