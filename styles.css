@@ -43,6 +43,7 @@ div.time,
 
 .contact a {
   color: black;
+  font-size: 0.9rem;
 }
 
 .contact a:hover {
