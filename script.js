@@ -5,6 +5,7 @@ class BookManager {
     this.bookAuthor = document.getElementById('author');
     this.article = document.getElementById('bookList');
     this.addButton = document.getElementById('add');
+    this.time = document.getElementById('time');
 
     this.addButton.addEventListener(
       'click',
@@ -20,6 +21,16 @@ class BookManager {
     this.bookTitle.value = '';
     this.bookAuthor.value = '';
   }
+
+  // add current time method
+
+  updateCurrentTime () {
+    const now = new Date();
+    const options = {year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true};
+    const formattedTime = now.toLocaleString('en-US', options);
+    this.time.textContent = formattedTime;
+  }
+
 
   addBook() {
     const title = this.bookTitle.value.trim();
@@ -66,6 +77,14 @@ class BookManager {
 
 function initializeApp() {
   const app = new BookManager();
+
+  // Call the updateCurrentTime function initially
+  app.updateCurrentTime();
+
+  // Update the time every second
+  setInterval(() => {
+    app.updateCurrentTime();
+  }, 1000);
   return app;
 }
 
