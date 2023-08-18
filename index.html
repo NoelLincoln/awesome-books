@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awesome books one</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main>
-    <h1>All Awesome Books</h1>
-   <section class="books_Container">
-     <article class="booklist" id="bookList">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome books one</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href>Awesome Books</a>
+        <ul class="nav-links">
+          <li>List</li>
+          <div class="vertical-divider"></div>
+          <li>Add New</li>
+          <div class="vertical-divider"></div>
+          <li>Contact</li>
 
-     </article>
-     <div class="divider"></div>
-     <h2>Add a new book</h2>
-     <form id="form">
-       <input id="title" type="text" placeholder="Title">
-       <br>
-       <br>
-       <input id="author" type="text" placeholder="Autor">
-       <br><br>
-       <button id="add" type="submit">Add</button>
-     </form>
-   </section>
-   <script src="script.js"></script>
-  </main>
-</body>
+        </ul>
+      </nav>
+      <time>August 18th 2023, 1.02p.m</time>
+      <h2>All Awesome Books</h2>
+      <section class="books_Container">
+        <article class="booklist" id="bookList">
+
+        </article>
+        <div class="divider"></div>
+        <h2>Add a new book</h2>
+        <form id="form">
+          <input id="title" type="text" placeholder="Title">
+          <br>
+          <br>
+          <input id="author" type="text" placeholder="Autor">
+          <br><br>
+          <button id="add" type="submit">Add</button>
+        </form>
+      </section>
+      <script src="script.js"></script>
+    </main>
+  </body>
 </html>
