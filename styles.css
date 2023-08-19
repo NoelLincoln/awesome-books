@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  transition: 500ms;
 }
 
 .main-container {
@@ -48,7 +50,7 @@ div.time,
 }
 
 .contact {
-  margin: 3rem auto auto auto;
+  margin: auto;
   width: 80%;
   max-width: 450px;
 }
@@ -190,4 +192,10 @@ nav {
 
 main {
   height: auto;
+}
+
+@media screen  and (max-width: 378px) {
+  .main-container {
+    height: 550px;
+  }
 }
