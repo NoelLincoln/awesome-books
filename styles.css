@@ -1,6 +1,37 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  transition: 500ms;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 475px;
+  width: 98%;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1,
+h2 {
+  font-family:
+    'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
 }
 
 h1 {
@@ -8,10 +39,66 @@ h1 {
   margin-top: 2rem;
 }
 
-.books_Container {
+.books_Container,
+footer,
+nav,
+div.time,
+.contact {
   width: 98%;
   max-width: 500px;
   margin: auto;
+}
+
+.contact {
+  margin: auto;
+  width: 80%;
+  max-width: 450px;
+}
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.contact > ul {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.contact li,
+.contact p {
+  color: black;
+  padding: 3px auto;
+}
+
+nav > a {
+  text-decoration: none !important;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding: 5px 10px 5px 10px;
+}
+
+.contact a {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.contact a:hover {
+  color: rgb(18, 18, 73);
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 20px !important;
+}
+
+.footer {
+  margin: 3rem auto 2px auto;
+  border: 3px solid black;
+  padding: 5px 10px 5px 10px;
 }
 
 article.booklist {
@@ -19,6 +106,8 @@ article.booklist {
   flex-direction: column;
   border: 2px solid black;
   border-radius: 4px;
+  overflow-y: auto;
+  height: 178px;
 }
 
 .book {
@@ -62,7 +151,6 @@ form {
 
 form > button {
   float: right;
-  margin-right: -14px;
 }
 
 input[type='text'] {
@@ -73,4 +161,41 @@ input[type='text'] {
 
 .grey {
   background-color: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid black;
+  margin: 3rem auto auto auto;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: rgb(30, 92, 200);
+}
+
+.nav-links li {
+  font-weight: 600;
+  padding: 2px 10px;
+  border-right: 2px solid black;
+}
+
+.nav-links li:last-child {
+  border-right: none;
+}
+
+main {
+  height: auto;
+}
+
+@media screen  and (max-width: 378px) {
+  .main-container {
+    height: 550px;
+  }
 }

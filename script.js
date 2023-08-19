@@ -5,6 +5,7 @@ class BookManager {
     this.bookAuthor = document.getElementById('author');
     this.article = document.getElementById('bookList');
     this.addButton = document.getElementById('add');
+    this.time = document.getElementById('time');
 
     this.addButton.addEventListener(
       'click',
@@ -13,12 +14,58 @@ class BookManager {
     this.renderBooks();
   }
 
+  navHandler() {
+    const bookContainer = document.getElementById('books-container');
+    const formSection = document.getElementById('form-section');
+    const contactSection = document.getElementById('contact-section');
+    const navUl = document.getElementById('nav_links');
+    const navLinks = navUl.getElementsByClassName('link');
+    for (let i = 0; i < navLinks.length; i += 1) {
+      navLinks[i].addEventListener('click', () => {
+        const current = document.getElementsByClassName('active');
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(' active', '');
+        }
+        this.className += ' active';
+        if (navLinks[i].innerHTML === 'List') {
+          formSection.style.display = 'none';
+          contactSection.style.display = 'none';
+          bookContainer.style.display = 'block';
+        } else if (navLinks[i].innerHTML === 'Add New') {
+          formSection.style.display = 'block';
+          contactSection.style.display = 'none';
+          bookContainer.style.display = 'none';
+        } else if (navLinks[i].innerHTML === 'Contact') {
+          contactSection.style.display = 'block';
+          formSection.style.display = 'none';
+          bookContainer.style.display = 'none';
+        }
+      });
+    }
+  }
+
   handleOnClickAddBook(event) {
     event.preventDefault();
     this.addBook();
     this.renderBooks();
     this.bookTitle.value = '';
     this.bookAuthor.value = '';
+  }
+
+  // add current time method
+
+  updateCurrentTime() {
+    const now = new Date();
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    };
+    const formattedTime = now.toLocaleString('en-US', options);
+    this.time.textContent = formattedTime;
   }
 
   addBook() {
@@ -66,6 +113,18 @@ class BookManager {
 
 function initializeApp() {
   const app = new BookManager();
+
+  document.getElementById('form-section').style.display = 'none';
+  document.getElementById('contact-section').style.display = 'none';
+
+  // Call the updateCurrentTime function initially
+  app.updateCurrentTime();
+  app.navHandler();
+
+  // Update the time every second
+  setInterval(() => {
+    app.updateCurrentTime();
+  }, 1000);
   return app;
 }
 
